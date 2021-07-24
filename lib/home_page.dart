@@ -25,8 +25,16 @@ class HomePage extends StatelessWidget {
             Text(
               "Hello Dogs",
               style: TextStyle(color: Colors.blue, fontSize: 34)),
-            Container( margin: EdgeInsets.only(top: 10,bottom: 10),
-              child: Image.asset("assets/images/dog1.png"),
+            Container(
+                margin: EdgeInsets.only(top: 10,bottom: 10),
+              height: 300,
+              child: PageView(
+                children: <Widget> [
+                  Image.asset("assets/images/dog1.png"),
+                  Image.asset("assets/images/dog2.png"),
+                  Image.asset("assets/images/dog3.png"),
+                ],
+              )
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
